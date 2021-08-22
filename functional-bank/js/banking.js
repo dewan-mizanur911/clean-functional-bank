@@ -14,6 +14,7 @@ function updateField(fieldId, amount) {
   const newFieldAmount = getTextValue(fieldId) + amount;
   document.getElementById(fieldId).innerText = newFieldAmount;
 }
+
 function balanceUpdate(amount, isAdding) {
   const balanceAmount = getTextValue('balance-total');
   let newBalance;
@@ -24,7 +25,7 @@ function balanceUpdate(amount, isAdding) {
     newBalance = balanceAmount - amount;
   }
   document.getElementById("balance-total").innerText = newBalance;
-}
+} 
 
 document.getElementById('deposit-button').addEventListener('click', function () {
   const amount = inputValue('deposit-input');
